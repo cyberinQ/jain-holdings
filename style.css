@@ -1,0 +1,90 @@
+/* Basic Professional Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+header h1 { margin: 0; }
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 1rem;
+}
+img { max-width: 100%; height: auto; border-radius: 8px; }
+
+/* Homepage Gallery Styles */
+.property-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+.property-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.property-card img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.property-card h3 { padding: 0 1.5rem; }
+.property-card p { padding: 0 1.5rem 1.5rem 1.5rem; }
+
+
+/* Detail Page Styles */
+.detail-page main {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 30px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.detail-page header { background-color: #444; }
+.detail-page .contact-form {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+@media (max-width: 800px) {
+    .detail-page main { grid-template-columns: 1fr; }
+}
+
+/* Contact Form Styles */
+.contact-form h2 { margin-top: 0; }
+.contact-form label { display: block; margin-bottom: 1.25rem; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important! */
+    margin-top: 5px;
+}
+.contact-form button {
+    background-color: #007aff;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+.contact-form button:hover { background-color: #0056b3; }
